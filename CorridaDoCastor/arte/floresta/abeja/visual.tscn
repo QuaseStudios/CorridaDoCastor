@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/motor/visual.gd" id="s"]
+[ext_resource type="Texture2D" path="res://arte/floresta/abeja/inicio_001.png" id="t1"]
+[ext_resource type="Texture2D" path="res://arte/floresta/abeja/inicio_002.png" id="t2"]
+[ext_resource type="Texture2D" path="res://arte/floresta/abeja/inicio_003.png" id="t3"]
+[ext_resource type="Texture2D" path="res://arte/floresta/abeja/inicio_004.png" id="t4"]
+
+[sub_resource type="SpriteFrames" id="f"]
+animations = [{"frames": [{"duration": 1.0, "texture": ExtResource("t1")}, {"duration": 1.0, "texture": ExtResource("t2")}, {"duration": 1.0, "texture": ExtResource("t3")}, {"duration": 1.0, "texture": ExtResource("t4")}], "loop": true, "name": &"inicio", "speed": 30.0}]
+
+[node name="visual" type="AnimatedSprite2D"]
+sprite_frames = SubResource("f")
+animation = &"inicio"
+centered = false
+offset = Vector2(-51, -71)
+script = ExtResource("s")
+metadata/tamanho = Vector2(100, 100)
+metadata/registro = Vector2(51, 71)
+metadata/animacao_inicial = "inicio"
+metadata/proximas = {}
+metadata/fim_estado = []
+metadata/continua = {}

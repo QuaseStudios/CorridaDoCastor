@@ -1,0 +1,33 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://scripts/motor/visual.gd" id="s"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/idle_001.png" id="t1"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/idle_002.png" id="t2"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/idle_003.png" id="t3"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_001.png" id="t4"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_002.png" id="t5"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_003.png" id="t6"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_004.png" id="t7"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_005.png" id="t8"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_006.png" id="t9"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_007.png" id="t10"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_008.png" id="t11"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_009.png" id="t12"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_010.png" id="t13"]
+[ext_resource type="Texture2D" path="res://arte/neve/munieco/atacar_011.png" id="t14"]
+
+[sub_resource type="SpriteFrames" id="f"]
+animations = [{"frames": [{"duration": 1.0, "texture": ExtResource("t1")}, {"duration": 1.0, "texture": ExtResource("t2")}, {"duration": 1.0, "texture": ExtResource("t3")}], "loop": false, "name": &"idle", "speed": 30.0}, {"frames": [{"duration": 1.0, "texture": ExtResource("t4")}, {"duration": 1.0, "texture": ExtResource("t5")}, {"duration": 1.0, "texture": ExtResource("t6")}, {"duration": 1.0, "texture": ExtResource("t7")}, {"duration": 1.0, "texture": ExtResource("t8")}, {"duration": 1.0, "texture": ExtResource("t9")}, {"duration": 1.0, "texture": ExtResource("t10")}, {"duration": 1.0, "texture": ExtResource("t11")}, {"duration": 1.0, "texture": ExtResource("t12")}, {"duration": 1.0, "texture": ExtResource("t13")}, {"duration": 1.0, "texture": ExtResource("t14")}], "loop": false, "name": &"atacar", "speed": 30.0}]
+
+[node name="visual" type="AnimatedSprite2D"]
+sprite_frames = SubResource("f")
+animation = &"idle"
+centered = false
+offset = Vector2(-45, -19)
+script = ExtResource("s")
+metadata/tamanho = Vector2(150, 134)
+metadata/registro = Vector2(45, 19)
+metadata/animacao_inicial = "idle"
+metadata/proximas = {"atacar": "idle"}
+metadata/fim_estado = []
+metadata/continua = {}

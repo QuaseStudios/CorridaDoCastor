@@ -1,0 +1,34 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://scripts/motor/visual.gd" id="s"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/parado_001.png" id="t1"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/parado_002.png" id="t2"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/parado_003.png" id="t3"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/levantando_001.png" id="t4"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/levantando_002.png" id="t5"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/levantando_003.png" id="t6"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/levantando_004.png" id="t7"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_001.png" id="t8"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_002.png" id="t9"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_003.png" id="t10"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_004.png" id="t11"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_005.png" id="t12"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_006.png" id="t13"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_007.png" id="t14"]
+[ext_resource type="Texture2D" path="res://arte/deserto/buitre/voando_008.png" id="t15"]
+
+[sub_resource type="SpriteFrames" id="f"]
+animations = [{"frames": [{"duration": 1.0, "texture": ExtResource("t1")}, {"duration": 1.0, "texture": ExtResource("t2")}, {"duration": 1.0, "texture": ExtResource("t3")}], "loop": false, "name": &"parado", "speed": 12.0}, {"frames": [{"duration": 1.0, "texture": ExtResource("t4")}, {"duration": 1.0, "texture": ExtResource("t5")}, {"duration": 1.0, "texture": ExtResource("t6")}, {"duration": 1.0, "texture": ExtResource("t7")}], "loop": false, "name": &"levantando", "speed": 12.0}, {"frames": [{"duration": 1.0, "texture": ExtResource("t8")}, {"duration": 1.0, "texture": ExtResource("t9")}, {"duration": 1.0, "texture": ExtResource("t10")}, {"duration": 1.0, "texture": ExtResource("t11")}, {"duration": 1.0, "texture": ExtResource("t12")}, {"duration": 1.0, "texture": ExtResource("t13")}, {"duration": 1.0, "texture": ExtResource("t14")}, {"duration": 1.0, "texture": ExtResource("t15")}], "loop": true, "name": &"voando", "speed": 12.0}]
+
+[node name="visual" type="AnimatedSprite2D"]
+sprite_frames = SubResource("f")
+animation = &"parado"
+centered = false
+offset = Vector2(-90, -67)
+script = ExtResource("s")
+metadata/tamanho = Vector2(180, 134)
+metadata/registro = Vector2(90, 67)
+metadata/animacao_inicial = "parado"
+metadata/proximas = {"levantando": "voando"}
+metadata/fim_estado = []
+metadata/continua = {}

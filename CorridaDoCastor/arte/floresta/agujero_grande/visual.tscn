@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/motor/visual.gd" id="s"]
+[ext_resource type="Texture2D" path="res://arte/floresta/agujero_grande/imagem.png" id="t1"]
+
+[sub_resource type="SpriteFrames" id="f"]
+animations = [{"frames": [{"duration": 1.0, "texture": ExtResource("t1")}], "loop": false, "name": &"padrao", "speed": 1.0}]
+
+[node name="visual" type="AnimatedSprite2D"]
+sprite_frames = SubResource("f")
+animation = &"padrao"
+centered = false
+offset = Vector2(-105, -4)
+script = ExtResource("s")
+metadata/tamanho = Vector2(206, 11)
+metadata/registro = Vector2(105, 4)
+metadata/animacao_inicial = "padrao"
+metadata/proximas = {}
+metadata/fim_estado = []
+metadata/continua = {}

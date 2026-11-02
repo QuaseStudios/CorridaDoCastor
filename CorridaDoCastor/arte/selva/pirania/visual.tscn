@@ -1,0 +1,28 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/motor/visual.gd" id="s"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_001.png" id="t1"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_002.png" id="t2"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_003.png" id="t3"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_004.png" id="t4"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_005.png" id="t5"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_006.png" id="t6"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_007.png" id="t7"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_008.png" id="t8"]
+[ext_resource type="Texture2D" path="res://arte/selva/pirania/idle_009.png" id="t9"]
+
+[sub_resource type="SpriteFrames" id="f"]
+animations = [{"frames": [{"duration": 1.0, "texture": ExtResource("t1")}, {"duration": 1.0, "texture": ExtResource("t2")}, {"duration": 1.0, "texture": ExtResource("t3")}, {"duration": 1.0, "texture": ExtResource("t4")}, {"duration": 1.0, "texture": ExtResource("t5")}, {"duration": 1.0, "texture": ExtResource("t6")}, {"duration": 1.0, "texture": ExtResource("t7")}, {"duration": 1.0, "texture": ExtResource("t8")}, {"duration": 1.0, "texture": ExtResource("t9")}], "loop": true, "name": &"idle", "speed": 30.0}]
+
+[node name="visual" type="AnimatedSprite2D"]
+sprite_frames = SubResource("f")
+animation = &"idle"
+centered = false
+offset = Vector2(-25, -29)
+script = ExtResource("s")
+metadata/tamanho = Vector2(50, 59)
+metadata/registro = Vector2(25, 29)
+metadata/animacao_inicial = "idle"
+metadata/proximas = {}
+metadata/fim_estado = []
+metadata/continua = {}

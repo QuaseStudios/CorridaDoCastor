@@ -1,0 +1,253 @@
+﻿prioridade;caminho;tipo;nome_original
+1 - marca ou coelho visivel;arte/cidade/cartel;imagem;cartel
+1 - marca ou coelho visivel;arte/comum/item_comum;imagem;pila_ordinaria
+1 - marca ou coelho visivel;arte/comum/item_especial;imagem;pila_duracell
+1 - marca ou coelho visivel;arte/comum/jogador;animacao;Bunny
+1 - marca ou coelho visivel;arte/deserto/cartel;imagem;cartel
+1 - marca ou coelho visivel;arte/final/cartel;imagem;cartel
+1 - marca ou coelho visivel;arte/final/profe;animacao;profe
+1 - marca ou coelho visivel;arte/floresta/cartel;imagem;cartel
+1 - marca ou coelho visivel;arte/idioma_es/instrucoes.png;imagem;fondo_instrucciones
+1 - marca ou coelho visivel;arte/idioma_es/vitoria.png;imagem;ganador_ganaste_con_dura
+1 - marca ou coelho visivel;arte/idioma_pt/instrucoes.png;imagem;fondo_instrucciones
+1 - marca ou coelho visivel;arte/idioma_pt/vitoria.png;imagem;ganador_ganaste_con_dura
+1 - marca ou coelho visivel;arte/interface/fundo_derrota;imagem;fondo_perdedor
+1 - marca ou coelho visivel;arte/interface/fundo_menu;imagem;fondo_menu
+1 - marca ou coelho visivel;arte/interface/fundo_vitoria;imagem;fondo_ganador
+1 - marca ou coelho visivel;arte/interface/hud_cabeca;imagem;cabeza_vidas
+1 - marca ou coelho visivel;arte/interface/hud_efeito_item;animacao;pila_animada
+1 - marca ou coelho visivel;arte/interface/hud_item_comum;imagem;pila roja
+1 - marca ou coelho visivel;arte/interface/hud_item_especial;imagem;pila dura
+1 - marca ou coelho visivel;arte/intro/abertura_1.png;imagem;pilab
+1 - marca ou coelho visivel;arte/intro/abertura_2.png;imagem;logo
+1 - marca ou coelho visivel;arte/intro/abertura_3.png;imagem;bunnnyrace
+1 - marca ou coelho visivel;arte/intro/botao_es.png;imagem;bt_espanol
+1 - marca ou coelho visivel;arte/intro/botao_es_sobre.png;imagem;bt_espanol_roll
+1 - marca ou coelho visivel;arte/intro/botao_pt.png;imagem;bt_portu
+1 - marca ou coelho visivel;arte/intro/botao_pt_sobre.png;imagem;bt_portu_roll
+1 - marca ou coelho visivel;arte/neve/cartel;imagem;cartel
+1 - marca ou coelho visivel;arte/selva/cartel;imagem;cartel
+2 - arte original;arte/cidade/aceite;imagem;aceite
+2 - arte original;arte/cidade/alcantarilla;imagem;alcantarilla
+2 - arte original;arte/cidade/alcantarilla_tapa;imagem;alcantarilla_tapa
+2 - arte original;arte/cidade/arbol;imagem;arbol
+2 - arte original;arte/cidade/autofrente;animacao;autofrente
+2 - arte original;arte/cidade/balcon_reja;imagem;balcon_reja
+2 - arte original;arte/cidade/balcon_sombra;imagem;balcon_sombra
+2 - arte original;arte/cidade/boca_de_alcantarilla;imagem;boca_de_alcantarilla
+2 - arte original;arte/cidade/bolsas;imagem;bolsas
+2 - arte original;arte/cidade/calle;imagem;calle
+2 - arte original;arte/cidade/edif1;imagem;edif1
+2 - arte original;arte/cidade/edif2;imagem;edif2
+2 - arte original;arte/cidade/fondo;imagem;fondo
+2 - arte original;arte/cidade/gato;animacao;gato
+2 - arte original;arte/cidade/gorrion;animacao;gorrion
+2 - arte original;arte/cidade/maceta;imagem;maceta
+2 - arte original;arte/cidade/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/cidade/paloma;animacao;paloma
+2 - arte original;arte/cidade/perro;animacao;perro
+2 - arte original;arte/cidade/plataforma_dealcantarilla;imagem;plataforma_dealcantarilla
+2 - arte original;arte/cidade/rata;animacao;rata
+2 - arte original;arte/cidade/rueda;animacao;rueda
+2 - arte original;arte/cidade/semaforo;animacao;semaforo
+2 - arte original;arte/cidade/tacho;animacao;tacho
+2 - arte original;arte/cidade/ventanas_puerta;imagem;ventanas_puerta
+2 - arte original;arte/comum/largada_adelante;imagem;largada_adelante
+2 - arte original;arte/comum/largada_atras;imagem;largada_atras
+2 - arte original;arte/comum/meta_adelante;animacao;meta_adelante
+2 - arte original;arte/comum/meta_atras;animacao;meta_atras
+2 - arte original;arte/deserto/agujero;imagem;agujero
+2 - arte original;arte/deserto/buitre;animacao;Buitre
+2 - arte original;arte/deserto/cactus_gran;imagem;cactus_gran
+2 - arte original;arte/deserto/cactus_petit;imagem;cactus_petit
+2 - arte original;arte/deserto/escorpion;animacao;escorpion
+2 - arte original;arte/deserto/fondo;imagem;fondo
+2 - arte original;arte/deserto/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/deserto/mata;animacao;mata
+2 - arte original;arte/deserto/montana_pico;imagem;montana_pico
+2 - arte original;arte/deserto/montanota;imagem;montanota
+2 - arte original;arte/deserto/nube001;imagem;nube001
+2 - arte original;arte/deserto/nube002;imagem;nube002
+2 - arte original;arte/deserto/nube003;imagem;nube003
+2 - arte original;arte/deserto/plataforma;imagem;plataforma
+2 - arte original;arte/deserto/roca;imagem;roca
+2 - arte original;arte/deserto/serpiente;animacao;serpiente
+2 - arte original;arte/deserto/tapa_pozo;imagem;tapa pozo
+2 - arte original;arte/deserto/tormenta;animacao;tormenta
+2 - arte original;arte/deserto/tronco_buitre;imagem;tronco_buitre
+2 - arte original;arte/final/agujero;imagem;agujero
+2 - arte original;arte/final/agujero_grande;imagem;agujero_grande
+2 - arte original;arte/final/buitre;animacao;Buitre
+2 - arte original;arte/final/cactus_gran;imagem;cactus_gran
+2 - arte original;arte/final/cactus_petit;imagem;cactus_petit
+2 - arte original;arte/final/coyote;animacao;coyote
+2 - arte original;arte/final/escorpion;animacao;escorpion
+2 - arte original;arte/final/fondo;imagem;fondo
+2 - arte original;arte/final/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/final/mata;animacao;mata
+2 - arte original;arte/final/montana_pico;imagem;montana_pico
+2 - arte original;arte/final/montanota;imagem;montanota
+2 - arte original;arte/final/nube001;imagem;nube001
+2 - arte original;arte/final/nube002;imagem;nube002
+2 - arte original;arte/final/nube003;imagem;nube003
+2 - arte original;arte/final/plataforma;imagem;plataforma
+2 - arte original;arte/final/roca;imagem;roca
+2 - arte original;arte/final/serpiente;animacao;serpiente
+2 - arte original;arte/final/tapa_pozo_grande;imagem;tapa_pozo_grande
+2 - arte original;arte/final/tormenta;animacao;tormenta
+2 - arte original;arte/final/tronco_buitre;imagem;tronco_buitre
+2 - arte original;arte/floresta/abeja;animacao;abeja
+2 - arte original;arte/floresta/agujero;imagem;agujero
+2 - arte original;arte/floresta/agujero_grande;imagem;agujero_grande
+2 - arte original;arte/floresta/arania;animacao;arania
+2 - arte original;arte/floresta/arbol;imagem;arbol
+2 - arte original;arte/floresta/arbusto;imagem;arbusto
+2 - arte original;arte/floresta/fondo;imagem;fondo
+2 - arte original;arte/floresta/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/floresta/oso;animacao;oso
+2 - arte original;arte/floresta/plataforma_rama_derecha;imagem;plataforma rama derecha
+2 - arte original;arte/floresta/plataforma_rama_izquierda;imagem;plataforma rama izquierda
+2 - arte original;arte/floresta/plataforma_troncos;imagem;plataforma_troncos
+2 - arte original;arte/floresta/plataforma_troncos_giratorios;animacao;plataforma troncos_giratorios
+2 - arte original;arte/floresta/tapa_pozo;imagem;tapa pozo
+2 - arte original;arte/floresta/tronco_frente;imagem;tronco_frente
+2 - arte original;arte/floresta/tronco_giratorio;animacao;tronco_giratorio
+2 - arte original;arte/floresta/tronkito;imagem;tronkito
+2 - arte original;arte/floresta/zorro;animacao;zorro
+2 - arte original;arte/idioma_es/derrota.png;imagem;perdedor_fin_carrera
+2 - arte original;arte/idioma_es/grava_recorde.png;imagem;GrabaRecord
+2 - arte original;arte/idioma_es/pontuacao_final.png;imagem;Puntaje_final
+2 - arte original;arte/idioma_es/resultados.png;imagem;Resultados
+2 - arte original;arte/idioma_pt/derrota.png;imagem;perdedor_fin_carrera
+2 - arte original;arte/idioma_pt/grava_recorde.png;imagem;GrabaRecord
+2 - arte original;arte/idioma_pt/pontuacao_final.png;imagem;Puntaje_final
+2 - arte original;arte/idioma_pt/resultados.png;imagem;Resultados
+2 - arte original;arte/interface/efeito_100;animacao;100puntos
+2 - arte original;arte/interface/efeito_600;animacao;600puntos
+2 - arte original;arte/interface/hud_itens;imagem;contador_pilas
+2 - arte original;arte/interface/hud_pontos;imagem;contador_puntos
+2 - arte original;arte/interface/hud_vidas;imagem;contador_vidas
+2 - arte original;arte/interface/quadro_recordes;imagem;cartel_records
+2 - arte original;arte/neve/aguila;animacao;aguila
+2 - arte original;arte/neve/arbol;imagem;arbol
+2 - arte original;arte/neve/bola;imagem;bola
+2 - arte original;arte/neve/casita;imagem;casita
+2 - arte original;arte/neve/fondo;imagem;fondo
+2 - arte original;arte/neve/grieta;animacao;grieta
+2 - arte original;arte/neve/largadanieveadelante;imagem;largadaNieveAdelante
+2 - arte original;arte/neve/largadanieveatras;imagem;largadaNieveAtras
+2 - arte original;arte/neve/lobo;animacao;lobo
+2 - arte original;arte/neve/manchon;imagem;manchon
+2 - arte original;arte/neve/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/neve/metanieveadelante;animacao;metaNieveAdelante
+2 - arte original;arte/neve/metanieveatras;animacao;metaNieveAtras
+2 - arte original;arte/neve/munieco;animacao;munieco
+2 - arte original;arte/neve/osopolar;animacao;osopolar
+2 - arte original;arte/neve/pinitos;imagem;pinitos
+2 - arte original;arte/neve/pino;imagem;pino
+2 - arte original;arte/neve/rama1;imagem;rama1
+2 - arte original;arte/neve/rama2;imagem;rama2
+2 - arte original;arte/neve/tapa_pozo;imagem;tapa pozo
+2 - arte original;arte/neve/tormenta_nieve;animacao;tormenta_nieve
+2 - arte original;arte/neve/tronkito;imagem;tronkito
+2 - arte original;arte/selva/arbol1;imagem;arbol1
+2 - arte original;arte/selva/banana;animacao;banana
+2 - arte original;arte/selva/cocodrilo;animacao;cocodrilo
+2 - arte original;arte/selva/fondo;imagem;fondo
+2 - arte original;arte/selva/juncos;imagem;juncos
+2 - arte original;arte/selva/lagote;imagem;lagote
+2 - arte original;arte/selva/lagote_fin;imagem;lagote_fin
+2 - arte original;arte/selva/lagote_inicio;imagem;lagote_inicio
+2 - arte original;arte/selva/lagote_medio1;imagem;lagote_medio1
+2 - arte original;arte/selva/laguito;imagem;laguito
+2 - arte original;arte/selva/marcador_progresso;imagem;punto_movedizo
+2 - arte original;arte/selva/mono;animacao;mono
+2 - arte original;arte/selva/mosquito;animacao;mosquito
+2 - arte original;arte/selva/pirania;animacao;pirania
+2 - arte original;arte/selva/plantin;imagem;plantin
+2 - arte original;arte/selva/plataf;imagem;plataf
+2 - arte original;arte/selva/pozo;imagem;pozo
+2 - arte original;arte/selva/rama1;imagem;rama1
+2 - arte original;arte/selva/rama2;imagem;rama2
+2 - arte original;arte/selva/tapa_lago;imagem;tapa_lago
+2 - arte original;arte/selva/tapa_pozo;imagem;tapa pozo
+2 - arte original;arte/selva/tronco_arbol;imagem;tronco_arbol
+2 - arte original;arte/selva/venenosa;animacao;Venenosa
+2 - arte original;arte/selva/yuyitos;imagem;yuyitos
+2 - arte original;arte/selva/yuyos;imagem;yuyos
+2 - som original;sons/cidade/snd_choque.mp3;som;snd_choque.mp3
+2 - som original;sons/cidade/snd_choque.mp3.import;som;snd_choque.mp3.import
+2 - som original;sons/cidade/snd_gato.wav;som;snd_gato.wav
+2 - som original;sons/cidade/snd_gato.wav.import;som;snd_gato.wav.import
+2 - som original;sons/cidade/snd_paloma.wav;som;snd_paloma.wav
+2 - som original;sons/cidade/snd_paloma.wav.import;som;snd_paloma.wav.import
+2 - som original;sons/cidade/snd_perro.wav;som;snd_perro.wav
+2 - som original;sons/cidade/snd_perro.wav.import;som;snd_perro.wav.import
+2 - som original;sons/cidade/snd_rata.mp3;som;snd_rata.mp3
+2 - som original;sons/cidade/snd_rata.mp3.import;som;snd_rata.mp3.import
+2 - som original;sons/cidade/snd_rueda.mp3;som;snd_rueda.mp3
+2 - som original;sons/cidade/snd_rueda.mp3.import;som;snd_rueda.mp3.import
+2 - som original;sons/cidade/snd_tacho.wav;som;snd_tacho.wav
+2 - som original;sons/cidade/snd_tacho.wav.import;som;snd_tacho.wav.import
+2 - som original;sons/comum/snd_backgroundMusic.mp3;som;snd_backgroundMusic.mp3
+2 - som original;sons/comum/snd_backgroundMusic.mp3.import;som;snd_backgroundMusic.mp3.import
+2 - som original;sons/comum/snd_corriendo.wav;som;snd_corriendo.wav
+2 - som original;sons/comum/snd_corriendo.wav.import;som;snd_corriendo.wav.import
+2 - som original;sons/comum/snd_empieza.mp3;som;snd_empieza.mp3
+2 - som original;sons/comum/snd_empieza.mp3.import;som;snd_empieza.mp3.import
+2 - som original;sons/comum/snd_item_comum.mp3;som;snd_item_comum.mp3
+2 - som original;sons/comum/snd_item_comum.mp3.import;som;snd_item_comum.mp3.import
+2 - som original;sons/comum/snd_item_especial.wav;som;snd_item_especial.wav
+2 - som original;sons/comum/snd_item_especial.wav.import;som;snd_item_especial.wav.import
+2 - som original;sons/comum/snd_llegada.mp3;som;snd_llegada.mp3
+2 - som original;sons/comum/snd_llegada.mp3.import;som;snd_llegada.mp3.import
+2 - som original;sons/comum/snd_pierde_vida.mp3;som;snd_pierde_vida.mp3
+2 - som original;sons/comum/snd_pierde_vida.mp3.import;som;snd_pierde_vida.mp3.import
+2 - som original;sons/comum/snd_saltando.mp3;som;snd_saltando.mp3
+2 - som original;sons/comum/snd_saltando.mp3.import;som;snd_saltando.mp3.import
+2 - som original;sons/deserto/snd_escorpion.mp3;som;snd_escorpion.mp3
+2 - som original;sons/deserto/snd_escorpion.mp3.import;som;snd_escorpion.mp3.import
+2 - som original;sons/deserto/snd_serpiente.mp3;som;snd_serpiente.mp3
+2 - som original;sons/deserto/snd_serpiente.mp3.import;som;snd_serpiente.mp3.import
+2 - som original;sons/deserto/snd_tormenta.mp3;som;snd_tormenta.mp3
+2 - som original;sons/deserto/snd_tormenta.mp3.import;som;snd_tormenta.mp3.import
+2 - som original;sons/final/snd_coyote.wav;som;snd_coyote.wav
+2 - som original;sons/final/snd_coyote.wav.import;som;snd_coyote.wav.import
+2 - som original;sons/final/snd_escorpion.mp3;som;snd_escorpion.mp3
+2 - som original;sons/final/snd_escorpion.mp3.import;som;snd_escorpion.mp3.import
+2 - som original;sons/final/snd_serpiente.mp3;som;snd_serpiente.mp3
+2 - som original;sons/final/snd_serpiente.mp3.import;som;snd_serpiente.mp3.import
+2 - som original;sons/final/snd_tormenta.mp3;som;snd_tormenta.mp3
+2 - som original;sons/final/snd_tormenta.mp3.import;som;snd_tormenta.mp3.import
+2 - som original;sons/floresta/snd_abeja.mp3;som;snd_abeja.mp3
+2 - som original;sons/floresta/snd_abeja.mp3.import;som;snd_abeja.mp3.import
+2 - som original;sons/floresta/snd_arania.mp3;som;snd_arania.mp3
+2 - som original;sons/floresta/snd_arania.mp3.import;som;snd_arania.mp3.import
+2 - som original;sons/floresta/snd_oso.mp3;som;snd_oso.mp3
+2 - som original;sons/floresta/snd_oso.mp3.import;som;snd_oso.mp3.import
+2 - som original;sons/floresta/snd_tronco.mp3;som;snd_tronco.mp3
+2 - som original;sons/floresta/snd_tronco.mp3.import;som;snd_tronco.mp3.import
+2 - som original;sons/floresta/snd_zorro.mp3;som;snd_zorro.mp3
+2 - som original;sons/floresta/snd_zorro.mp3.import;som;snd_zorro.mp3.import
+2 - som original;sons/intro/armado.wav;som;armado.wav
+2 - som original;sons/intro/armado.wav.import;som;armado.wav.import
+2 - som original;sons/intro/chu.wav;som;chu.wav
+2 - som original;sons/intro/chu.wav.import;som;chu.wav.import
+2 - som original;sons/intro/swat.wav;som;swat.wav
+2 - som original;sons/intro/swat.wav.import;som;swat.wav.import
+2 - som original;sons/neve/snd_aguila.mp3;som;snd_aguila.mp3
+2 - som original;sons/neve/snd_aguila.mp3.import;som;snd_aguila.mp3.import
+2 - som original;sons/neve/snd_oso.mp3;som;snd_oso.mp3
+2 - som original;sons/neve/snd_oso.mp3.import;som;snd_oso.mp3.import
+2 - som original;sons/neve/snd_tormenta.mp3;som;snd_tormenta.mp3
+2 - som original;sons/neve/snd_tormenta.mp3.import;som;snd_tormenta.mp3.import
+2 - som original;sons/selva/snd_carnivora.wav;som;snd_carnivora.wav
+2 - som original;sons/selva/snd_carnivora.wav.import;som;snd_carnivora.wav.import
+2 - som original;sons/selva/snd_cocodrilo.mp3;som;snd_cocodrilo.mp3
+2 - som original;sons/selva/snd_cocodrilo.mp3.import;som;snd_cocodrilo.mp3.import
+2 - som original;sons/selva/snd_monito.mp3;som;snd_monito.mp3
+2 - som original;sons/selva/snd_monito.mp3.import;som;snd_monito.mp3.import
+2 - som original;sons/selva/snd_mosquito.mp3;som;snd_mosquito.mp3
+2 - som original;sons/selva/snd_mosquito.mp3.import;som;snd_mosquito.mp3.import
+2 - som original;sons/selva/snd_pirana.wav;som;snd_pirana.wav
+2 - som original;sons/selva/snd_pirana.wav.import;som;snd_pirana.wav.import
