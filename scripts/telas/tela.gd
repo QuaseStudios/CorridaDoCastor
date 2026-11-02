@@ -9,6 +9,23 @@ var _regs := {}
 
 func _init() -> void:
 	size = Vector2(640, 480)
+	# Faixa preta atrás da tela, enquanto as imagens dos menus forem 640x480.
+	var faixa := ColorRect.new()
+	faixa.color = Color.BLACK
+	faixa.position = Vector2(-2000, 0)
+	faixa.size = Vector2(4640, 480)
+	faixa.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(faixa)
+	tree_entered.connect(_ao_entrar)
+
+
+func _ao_entrar() -> void:
+	get_viewport().size_changed.connect(_centralizar)
+	_centralizar()
+
+
+func _centralizar() -> void:
+	position.x = (get_viewport().get_visible_rect().size.x - size.x) / 2.0
 
 
 func idioma() -> String:

@@ -10,6 +10,9 @@ const ACELERACAO_Y := 12
 const VELOCIDADE_MAX_Y := 50
 const MARGEM_Y := 200
 
+## Largura real da tela, que muda conforme o formato do monitor ou celular.
+static var largura_real: float = 854.0
+
 var pos_x = 0
 var pos_y = 0
 var alvo_y = 0

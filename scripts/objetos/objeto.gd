@@ -76,6 +76,12 @@ func dentro_dos_limites(c: CameraJogo) -> bool:
 	return x_tela + direita >= -Jogo.LIMITE_ATIVACAO and x_tela + esquerda <= CameraJogo.LARGURA_TELA + Jogo.LIMITE_ATIVACAO
 
 
+## Diz se o objeto aparece na tela real, que pode ser mais larga que a área das regras.
+func dentro_da_tela(c: CameraJogo) -> bool:
+	var x_tela = pos_x - c.pos_x * perspectiva
+	return x_tela + direita >= -Jogo.LIMITE_ATIVACAO and x_tela + esquerda <= CameraJogo.largura_real + Jogo.LIMITE_ATIVACAO
+
+
 func limiar_entrada() -> float:
 	return (pos_x + esquerda - CameraJogo.LARGURA_TELA - Jogo.LIMITE_ATIVACAO) / perspectiva
 

@@ -13,6 +13,7 @@ var _vidas: Label
 var _pontos: Label
 var _especiais: Array[Visual] = []
 var _comuns: Array[Visual] = []
+var _direita: Node2D
 var _painel_fase: Node2D
 var _painel: Visual = null
 var _marcador: Sprite2D
@@ -25,14 +26,18 @@ var _efeito_600: Visual
 func _ready() -> void:
 	layer = 5
 	_painel_fase = Node2D.new()
-	add_child(_painel_fase)
+	_direita = Node2D.new()
+	add_child(_direita)
+	_direita.add_child(_painel_fase)
 	_marcador = Sprite2D.new()
-	add_child(_marcador)
+	_direita.add_child(_marcador)
 	_adicionar("hud_vidas", Vector2(46, 27))
-	_adicionar("hud_pontos", Vector2(577, 23))
+	_direita.add_child(_criar("hud_pontos", Vector2(577, 23)))
 	_adicionar("hud_cabeca", Vector2(31, 20))
 	_vidas = _rotulo(Vector2(45, 17), Vector2(29, 21))
+	add_child(_vidas)
 	_pontos = _rotulo(Vector2(546, 15), Vector2(76, 15))
+	_direita.add_child(_pontos)
 	_adicionar("hud_itens", Vector2(79, 445))
 	for x in X_ESPECIAIS:
 		_especiais.append(_adicionar("hud_item_especial", Vector2(x, Y_ESPECIAIS)))
@@ -43,11 +48,23 @@ func _ready() -> void:
 	_efeito_100 = _adicionar("efeito_100", Vector2(307, 170))
 	_efeito_600 = _adicionar("efeito_600", Vector2(380, 168))
 	limpar()
+	get_viewport().size_changed.connect(_ajustar_largura)
+	_ajustar_largura()
+
+
+## Mantém os pontos e o painel da fase presos ao lado direito da tela.
+func _ajustar_largura() -> void:
+	_direita.position.x = get_viewport().get_visible_rect().size.x - 640.0
+
+
+func _criar(nome: String, pos: Vector2) -> Visual:
+	var v: Visual = load(PASTA + nome + "/visual.tscn").instantiate()
+	v.position = pos
+	return v
 
 
 func _adicionar(nome: String, pos: Vector2) -> Visual:
-	var v: Visual = load(PASTA + nome + "/visual.tscn").instantiate()
-	v.position = pos
+	var v := _criar(nome, pos)
 	add_child(v)
 	return v
 
@@ -61,7 +78,6 @@ func _rotulo(pos: Vector2, tam: Vector2) -> Label:
 	l.add_theme_font_size_override("font_size", 14)
 	l.add_theme_color_override("font_outline_color", Color.BLACK)
 	l.add_theme_constant_override("outline_size", 3)
-	add_child(l)
 	return l
 
 
@@ -114,4 +130,5 @@ func efeito_item_especial(numero: int) -> void:
 func efeito_pontos(valor: int, pos_tela: Vector2) -> void:
 	var v := _efeito_100 if valor == 100 else _efeito_600
 	v.position = pos_tela - Vector2(50, 50)
+	v.reset_physics_interpolation()
 	v.continuar()

@@ -58,10 +58,13 @@ var _cena_cache := {}
 var _info_cache := {}
 var _scripts := {}
 var _guardado := {}
+var _visuais_novos: Array[Visual] = []
 
 
 func _ready() -> void:
 	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
+	get_viewport().size_changed.connect(_atualizar_largura)
+	_atualizar_largura()
 	catalogo = _ler_json("res://dados/catalogo.json")
 	carregar_preferencias()
 
@@ -75,6 +78,12 @@ func _physics_process(_delta: float) -> void:
 			fase_concluida.emit()
 		else:
 			passo()
+
+
+func _atualizar_largura() -> void:
+	CameraJogo.largura_real = get_viewport().get_visible_rect().size.x
+	if _fundo:
+		_fundo.cobrir_largura(CameraJogo.largura_real)
 
 
 # ------------------------------------------------------------ partida
@@ -139,6 +148,8 @@ func carregar_fase(nome: String) -> void:
 	_fundo.z_index = -100
 	mundo.add_child(_fundo)
 	_fundo.position = Vector2(0, CameraJogo.ALTURA_TELA + camera.pos_y)
+	_fundo.cobrir_largura(CameraJogo.largura_real)
+	_fundo.reset_physics_interpolation()
 	if hud:
 		hud.preparar_fase(dados_fase)
 	for dados in dados_fase.objetos:
@@ -194,6 +205,7 @@ func excluir_depois(o: Objeto) -> void:
 
 func _excluir(o: Objeto) -> void:
 	_desativar(o)
+	_remover_visual(o)
 	objetos.erase(o)
 
 
@@ -201,13 +213,10 @@ func _ativar(o: Objeto) -> void:
 	if o.ativo:
 		return
 	o.ativo = true
-	if o.cena:
-		var v: Visual = o.cena.instantiate()
-		v.visible = o.visivel
-		v.position = Vector2(-100, -100)
-		v.z_index = o.pos_z * 10 + (1 if o is Jogador else 0)
-		mundo.add_child(v)
-		o.visual = v
+	if o.visual:
+		o.visual.play()
+	elif o.cena:
+		_criar_visual(o)
 	if o.paisagem:
 		ativos_paisagem.append(o)
 	else:
@@ -217,13 +226,27 @@ func _ativar(o: Objeto) -> void:
 	o.ativado()
 
 
+func _criar_visual(o: Objeto) -> void:
+	var v: Visual = o.cena.instantiate()
+	v.visible = o.visivel
+	v.position = Vector2(-100, -100)
+	v.z_index = o.pos_z * 10 + (1 if o is Jogador else 0)
+	mundo.add_child(v)
+	o.visual = v
+	_visuais_novos.append(v)
+
+
+func _remover_visual(o: Objeto) -> void:
+	if o.visual:
+		o.visual.queue_free()
+		o.visual = null
+
+
 func _desativar(o: Objeto) -> void:
 	if not o.ativo:
 		return
 	o.ativo = false
-	if o.visual:
-		o.visual.queue_free()
-		o.visual = null
+	_remover_visual(o)
 	if o.paisagem:
 		ativos_paisagem.erase(o)
 	else:
@@ -236,7 +259,7 @@ func _desativar(o: Objeto) -> void:
 func _atualizar_ativos() -> void:
 	var entrando: Array = []
 	for o in objetos:
-		var dentro: bool = o.dentro_dos_limites(camera)
+		var dentro: bool = o.dentro_da_tela(camera) if o.paisagem else o.dentro_dos_limites(camera)
 		if o.ativo and not dentro and o != jogador:
 			_desativar(o)
 		elif not o.ativo and dentro:
@@ -245,6 +268,24 @@ func _atualizar_ativos() -> void:
 		entrando.sort_custom(func(a, b): return a.limiar_entrada() < b.limiar_entrada())
 	for o in entrando:
 		_ativar(o)
+	_atualizar_previas()
+
+
+## Mostra, parados, os objetos que já aparecem na tela larga, mas ainda estão fora
+## da área das regras. Assim, inimigos e obstáculos agem no mesmo ponto do original.
+func _atualizar_previas() -> void:
+	for o in objetos:
+		if o.ativo or o.cena == null:
+			continue
+		var tela := camera.para_tela(o.pos_x, o.pos_y, o.pos_z)
+		if not o.dentro_da_tela(camera):
+			_remover_visual(o)
+		else:
+			if o.visual == null:
+				_criar_visual(o)
+				o.visual.pause()
+			o.visual.position = tela
+			o.visual.visible = o.visivel
 
 
 # ------------------------------------------------------------ passo do jogo
@@ -302,6 +343,10 @@ func _desenhar() -> void:
 			o.visual.visible = o.visivel
 	if _fundo:
 		_fundo.position.y = CameraJogo.ALTURA_TELA + camera.pos_y
+	for v in _visuais_novos:
+		if is_instance_valid(v):
+			v.reset_physics_interpolation()
+	_visuais_novos.clear()
 
 
 func _ler_controles() -> void:
@@ -382,6 +427,8 @@ func comeca_vida() -> void:
 			ponto = checkpoints[max(i - 1, 0)]
 			break
 	jogador.definir_posicao(int(ponto[0]), int(ponto[1]))
+	if jogador.visual:
+		_visuais_novos.append(jogador.visual)
 
 
 func tocou_hostil() -> void:

@@ -2,6 +2,10 @@ extends Personagem
 ## Carro que atravessa quando o jogador cruza com o semáforo vermelho.
 
 
+func preparar() -> void:
+	visivel = false
+
+
 func estado_idle() -> void:
 	visivel = false
 	if jogo.cor_semaforo == &"vermelho" and jogo.jogador.estado != &"morrendo" and tocou_jogador():

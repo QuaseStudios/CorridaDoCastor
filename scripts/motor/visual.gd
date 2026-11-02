@@ -6,9 +6,14 @@ extends AnimatedSprite2D
 
 ## Fica verdadeiro quando uma animação marcada em "fim_estado" termina.
 var fim_do_estado := false
+## Tamanho de exibição da arte. Para arte em 2x, use metadata/escala_arte = 0.5 na cena.
+var _escala := 1.0
 
 
 func _ready() -> void:
+	_escala = get_meta("escala_arte", 1.0)
+	offset /= _escala
+	scale = Vector2(_escala, _escala)
 	animation_finished.connect(_ao_terminar)
 	animar(get_meta("animacao_inicial"))
 
@@ -36,7 +41,13 @@ func parar() -> void:
 
 ## Espelha em torno do ponto de registro, igual às caixas de colisão.
 func espelhar(horizontal: bool, vertical: bool = false) -> void:
-	scale = Vector2(-1 if horizontal else 1, -1 if vertical else 1)
+	scale = Vector2(-_escala if horizontal else _escala, -_escala if vertical else _escala)
+	reset_physics_interpolation()
+
+
+## Estica o fundo para cobrir a largura da tela.
+func cobrir_largura(largura: float) -> void:
+	scale.x = _escala * max(1.0, largura / get_meta("tamanho").x)
 
 
 func _ao_terminar() -> void:

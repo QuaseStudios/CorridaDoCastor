@@ -102,8 +102,11 @@ func _abrir_recordes() -> void:
 	_mostrar("res://scripts/telas/tela_recordes.gd", func(_r): _abrir_menu())
 
 
-## Atalhos de teste: só funcionam rodando pelo editor (versão de depuração).
+## F11 alterna a tela cheia. Os outros atalhos são de teste e só funcionam pelo editor.
 func _unhandled_key_input(evento: InputEvent) -> void:
+	if evento.is_pressed() and evento.keycode == KEY_F11:
+		_alternar_tela_cheia()
+		return
 	if not OS.is_debug_build() or not evento.is_pressed() or not Jogo.jogando:
 		return
 	match evento.keycode:
@@ -113,6 +116,13 @@ func _unhandled_key_input(evento: InputEvent) -> void:
 			_proximo_checkpoint()
 		KEY_F3:
 			Jogo.termino_de_fase()
+
+
+func _alternar_tela_cheia() -> void:
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
 func _proximo_checkpoint() -> void:

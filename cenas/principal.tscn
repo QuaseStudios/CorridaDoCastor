@@ -24,7 +24,8 @@ layer = 10
 layer = 20
 
 [node name="Cor" type="ColorRect" parent="Fade"]
-offset_right = 640.0
-offset_bottom = 480.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
