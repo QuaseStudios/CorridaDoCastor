@@ -12,6 +12,7 @@ const MS_POR_PASSO := 1000.0 / 30.0
 const TEMPO_FESTEJO_MS := 3000
 const MAX_RECORDES := 10
 const LIMITE_ATIVACAO := 100
+const COMPRIMENTO_CHAO := 30000.0
 const ARQUIVO_PREFERENCIAS := "user://preferencias.json"
 
 enum Estado { PARADO, JOGANDO, TERMINANDO }
@@ -52,6 +53,7 @@ var ativos_paisagem: Array = []
 var caminhantes_ativos: Array = []
 var _remover: Array = []
 var _fundo: Visual = null
+var _chao: Sprite2D = null
 var _inicio_festejo := 0.0
 var _contador_progresso := 0
 var _cena_cache := {}
@@ -147,9 +149,10 @@ func carregar_fase(nome: String) -> void:
 	_fundo = _cena(dados_fase.visuais_fixos.fundo).instantiate()
 	_fundo.z_index = -100
 	mundo.add_child(_fundo)
-	_fundo.position = Vector2(0, CameraJogo.ALTURA_TELA + camera.pos_y)
+	_fundo.position = Vector2(0, _y_fundo())
 	_fundo.cobrir_largura(CameraJogo.largura_real)
 	_fundo.reset_physics_interpolation()
+	_criar_chao()
 	if hud:
 		hud.preparar_fase(dados_fase)
 	for dados in dados_fase.objetos:
@@ -158,6 +161,32 @@ func carregar_fase(nome: String) -> void:
 			comprimento_fase = float(o.pos_x)
 	_contador_progresso = 0
 	_atualiza_hud()
+
+
+## Quanto o fundo sobe ou desce com a câmera. Sem o ajuste na fase, segue 1 para 1.
+func _y_fundo() -> float:
+	return CameraJogo.ALTURA_TELA + camera.pos_y * dados_fase.get("fundo_parallax_y", 1.0)
+
+
+## Faixa de chão que se move junto com a fase, em fases que definem "chao_textura".
+func _criar_chao() -> void:
+	if not dados_fase.has("chao_textura"):
+		return
+	_chao = Sprite2D.new()
+	_chao.texture = load(dados_fase.chao_textura.imagem)
+	_chao.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	_chao.centered = false
+	_chao.region_enabled = true
+	_chao.region_rect = Rect2(0, 0, COMPRIMENTO_CHAO * 2.0, _chao.texture.get_height())
+	_chao.scale = Vector2(0.5, 0.5)
+	_chao.z_index = -35
+	mundo.add_child(_chao)
+	_posicionar_chao()
+	_chao.reset_physics_interpolation()
+
+
+func _posicionar_chao() -> void:
+	_chao.position = Vector2(-camera.pos_x - 2000.0, float(dados_fase.chao_textura.topo) + camera.pos_y)
 
 
 func limpar_fase() -> void:
@@ -175,6 +204,9 @@ func limpar_fase() -> void:
 	if _fundo:
 		_fundo.queue_free()
 		_fundo = null
+	if _chao:
+		_chao.queue_free()
+		_chao = null
 	Som.parar_tudo()
 
 
@@ -342,7 +374,9 @@ func _desenhar() -> void:
 			o.visual.position = camera.para_tela(o.pos_x, o.pos_y, o.pos_z)
 			o.visual.visible = o.visivel
 	if _fundo:
-		_fundo.position.y = CameraJogo.ALTURA_TELA + camera.pos_y
+		_fundo.position.y = _y_fundo()
+	if _chao:
+		_posicionar_chao()
 	for v in _visuais_novos:
 		if is_instance_valid(v):
 			v.reset_physics_interpolation()
@@ -481,12 +515,14 @@ func carregar_preferencias() -> void:
 	if d is Dictionary:
 		idioma = d.get("idioma", "")
 		recordes = d.get("recordes", [])
+		Som.definir_musica(d.get("musica", true))
+		Som.definir_efeitos(d.get("efeitos", true))
 
 
 func salvar_preferencias() -> void:
 	var f := FileAccess.open(ARQUIVO_PREFERENCIAS, FileAccess.WRITE)
 	if f:
-		f.store_string(JSON.stringify({"idioma": idioma, "recordes": recordes}))
+		f.store_string(JSON.stringify({"idioma": idioma, "recordes": recordes, "musica": Som.musica_ligada, "efeitos": Som.efeitos_ligados}))
 
 
 # ------------------------------------------------------------ auxiliares

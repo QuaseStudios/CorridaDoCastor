@@ -46,7 +46,13 @@ func _fechar_tela() -> void:
 
 
 func _abrir_intro() -> void:
-	_mostrar("res://scripts/telas/tela_intro.gd", func(_r): _abrir_menu())
+	_mostrar("res://scripts/telas/tela_intro.gd", func(_r): _abrir_menu_do_preto())
+
+
+func _abrir_menu_do_preto() -> void:
+	_abrir_menu()
+	fade.color.a = 1.0
+	create_tween().tween_property(fade, "color:a", 0.0, 0.6)
 
 
 func _abrir_menu() -> void:
@@ -70,6 +76,8 @@ func _acao_menu(acao: String) -> void:
 			Jogo.continuar_partida()
 		"instrucoes":
 			_mostrar("res://scripts/telas/tela_instrucoes.gd", func(_r): _abrir_menu())
+		"opcoes":
+			_mostrar("res://scripts/telas/tela_opcoes.gd", func(_r): _abrir_menu())
 		"sair":
 			Jogo.salvar_preferencias()
 			get_tree().quit()

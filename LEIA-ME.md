@@ -71,7 +71,7 @@ Para um movimento mais suave, experimente ligar **Physics Interpolation** nas co
 
 - **Animações em Flash:** viraram sequências de PNG.
 - **Menus:** agora usam botões da Godot, no lugar dos botões em Flash.
-- **Abertura:** foi simplificada para três imagens com som (`tela_intro.gd`).
+- **Abertura:** foi trocada pela da Quase Studios e Quase Games, com o foguete (`tela_intro.gd` e `arte/marca/`).
 - **Fonte:** os números do placar usam a fonte padrão da Godot.
 - **Tela final:** dura 4 segundos, valor escolhido por não ter sido possível confirmar o tempo original.
 - **Velocidade:** 30 passos por segundo, lidos da configuração do projeto original.

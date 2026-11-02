@@ -3,22 +3,13 @@ extends Tela
 
 
 func _ready() -> void:
-	visual_interface("fundo_menu", Vector2(0, 479))
-	var es := _botao_imagem("botao_es", "botao_es_sobre", Vector2(40, 330), "es")
-	var pt := _botao_imagem("botao_pt", "botao_pt_sobre", Vector2(340, 330), "pt")
+	fundo_menu()
+	var pt := tabua("Português", Rect2(186, 240, 268, 68), func(): _escolher("pt"), true)
+	tabua("Español", Rect2(208, 320, 224, 53), func(): _escolher("es"))
 	pt.grab_focus()
-	es.focus_neighbor_right = pt.get_path()
 
 
-func _botao_imagem(nome: String, sobre: String, pos: Vector2, cod: String) -> TextureButton:
-	var b := TextureButton.new()
-	b.texture_normal = load("res://arte/intro/%s.png" % nome)
-	b.texture_hover = load("res://arte/intro/%s.png" % sobre)
-	b.texture_focused = load("res://arte/intro/%s.png" % sobre)
-	b.position = pos
-	b.pressed.connect(func():
-		Jogo.idioma = cod
-		Jogo.salvar_preferencias()
-		concluida.emit("ok"))
-	add_child(b)
-	return b
+func _escolher(codigo: String) -> void:
+	Jogo.idioma = codigo
+	Jogo.salvar_preferencias()
+	concluida.emit("ok")

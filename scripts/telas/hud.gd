@@ -1,12 +1,14 @@
 class_name Hud
 extends CanvasLayer
 ## Placar: vidas, pontos, itens coletados e progresso na fase.
-## As posições vêm do jogo original (tela de 640x480).
+## As posições são medidas na arte do placar, em uma tela de referência de 640x480.
 
-const X_ESPECIAIS := [23, 35, 47, 61, 73, 85, 98, 110, 122, 135]
-const X_COMUNS := [22, 34, 47, 59, 72, 83]
-const Y_ESPECIAIS := 434
-const Y_COMUNS := 461
+const X_ESPECIAIS := [27.1, 43.2, 59.2, 75.1, 91.1, 107.0, 122.9, 138.8, 154.9, 171.1]
+const X_COMUNS := [28.5, 47.1, 65.6, 84.0, 102.4, 120.8]
+const Y_ESPECIAIS := 427.3
+const Y_COMUNS := 456.3
+const FONTE := "res://arte/fontes/Poppins-Bold.ttf"
+const TAMANHO_MARCADOR := 20.0
 const PASTA := "res://arte/interface/"
 
 var _vidas: Label
@@ -18,33 +20,31 @@ var _painel_fase: Node2D
 var _painel: Visual = null
 var _marcador: Sprite2D
 var _trajeto: Array = []
-var _efeito_item: Visual
 var _efeito_100: Visual
 var _efeito_600: Visual
 
 
 func _ready() -> void:
 	layer = 5
+	physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
 	_painel_fase = Node2D.new()
 	_direita = Node2D.new()
 	add_child(_direita)
 	_direita.add_child(_painel_fase)
 	_marcador = Sprite2D.new()
 	_direita.add_child(_marcador)
-	_adicionar("hud_vidas", Vector2(46, 27))
-	_direita.add_child(_criar("hud_pontos", Vector2(577, 23)))
-	_adicionar("hud_cabeca", Vector2(31, 20))
-	_vidas = _rotulo(Vector2(45, 17), Vector2(29, 21))
+	_adicionar("hud_vidas", Vector2(68.0, 30.6))
+	_direita.add_child(_criar("hud_pontos", Vector2(561.0, 27.0)))
+	_adicionar("hud_cabeca", Vector2(34.7, 33.5))
+	_vidas = _rotulo(Vector2(56, 22), Vector2(65, 25), 18, Color("3a1f0a"))
 	add_child(_vidas)
-	_pontos = _rotulo(Vector2(546, 15), Vector2(76, 15))
+	_pontos = _rotulo(Vector2(499, 20), Vector2(124, 20), 15, Color("fff3d6"))
 	_direita.add_child(_pontos)
-	_adicionar("hud_itens", Vector2(79, 445))
+	_adicionar("hud_itens", Vector2(99.0, 434.6))
 	for x in X_ESPECIAIS:
 		_especiais.append(_adicionar("hud_item_especial", Vector2(x, Y_ESPECIAIS)))
 	for x in X_COMUNS:
 		_comuns.append(_adicionar("hud_item_comum", Vector2(x, Y_COMUNS)))
-	_efeito_item = _adicionar("hud_efeito_item", Vector2(23, 434))
-	_efeito_item.visible = false
 	_efeito_100 = _adicionar("efeito_100", Vector2(307, 170))
 	_efeito_600 = _adicionar("efeito_600", Vector2(380, 168))
 	limpar()
@@ -69,15 +69,15 @@ func _adicionar(nome: String, pos: Vector2) -> Visual:
 	return v
 
 
-func _rotulo(pos: Vector2, tam: Vector2) -> Label:
+func _rotulo(pos: Vector2, tam: Vector2, tamanho_fonte: int, cor: Color) -> Label:
 	var l := Label.new()
 	l.position = pos
 	l.size = tam
-	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	l.add_theme_font_size_override("font_size", 14)
-	l.add_theme_color_override("font_outline_color", Color.BLACK)
-	l.add_theme_constant_override("outline_size", 3)
+	l.add_theme_font_override("font", load(FONTE))
+	l.add_theme_font_size_override("font_size", tamanho_fonte)
+	l.add_theme_color_override("font_color", cor)
 	return l
 
 
@@ -95,6 +95,7 @@ func preparar_fase(fase: Dictionary) -> void:
 	_painel.position = Vector2(525, 424)
 	_painel_fase.add_child(_painel)
 	_marcador.texture = load(fase.marcador.imagem)
+	_marcador.scale = Vector2.ONE * minf(1.0, TAMANHO_MARCADOR / _marcador.texture.get_size().y)
 	_trajeto = fase.marcador.trajeto
 	definir_progresso(0.0)
 
@@ -122,9 +123,12 @@ func definir_progresso(percentual: float) -> void:
 func efeito_item_especial(numero: int) -> void:
 	if numero < 1 or numero > X_ESPECIAIS.size():
 		return
-	_efeito_item.position = Vector2(X_ESPECIAIS[numero - 1], Y_ESPECIAIS)
-	_efeito_item.visible = true
-	_efeito_item.animar("seg_3")
+	# O tronco que completou o painel dá um pulinho.
+	var icone := _especiais[numero - 1]
+	var escala := icone.scale
+	var t := create_tween()
+	t.tween_property(icone, "scale", escala * 1.6, 0.12)
+	t.tween_property(icone, "scale", escala, 0.18)
 
 
 func efeito_pontos(valor: int, pos_tela: Vector2) -> void:

@@ -1,9 +1,5 @@
 ﻿prioridade;caminho;tipo;nome_original
 1 - marca ou coelho visivel;arte/cidade/cartel;imagem;cartel
-1 - marca ou coelho visivel;arte/comum/item_comum;imagem;pila_ordinaria
-1 - marca ou coelho visivel;arte/comum/item_especial;imagem;pila_duracell
-1 - marca ou coelho visivel;arte/comum/jogador;animacao;Bunny
-1 - marca ou coelho visivel;arte/deserto/cartel;imagem;cartel
 1 - marca ou coelho visivel;arte/final/cartel;imagem;cartel
 1 - marca ou coelho visivel;arte/final/profe;animacao;profe
 1 - marca ou coelho visivel;arte/floresta/cartel;imagem;cartel
@@ -12,19 +8,7 @@
 1 - marca ou coelho visivel;arte/idioma_pt/instrucoes.png;imagem;fondo_instrucciones
 1 - marca ou coelho visivel;arte/idioma_pt/vitoria.png;imagem;ganador_ganaste_con_dura
 1 - marca ou coelho visivel;arte/interface/fundo_derrota;imagem;fondo_perdedor
-1 - marca ou coelho visivel;arte/interface/fundo_menu;imagem;fondo_menu
 1 - marca ou coelho visivel;arte/interface/fundo_vitoria;imagem;fondo_ganador
-1 - marca ou coelho visivel;arte/interface/hud_cabeca;imagem;cabeza_vidas
-1 - marca ou coelho visivel;arte/interface/hud_efeito_item;animacao;pila_animada
-1 - marca ou coelho visivel;arte/interface/hud_item_comum;imagem;pila roja
-1 - marca ou coelho visivel;arte/interface/hud_item_especial;imagem;pila dura
-1 - marca ou coelho visivel;arte/intro/abertura_1.png;imagem;pilab
-1 - marca ou coelho visivel;arte/intro/abertura_2.png;imagem;logo
-1 - marca ou coelho visivel;arte/intro/abertura_3.png;imagem;bunnnyrace
-1 - marca ou coelho visivel;arte/intro/botao_es.png;imagem;bt_espanol
-1 - marca ou coelho visivel;arte/intro/botao_es_sobre.png;imagem;bt_espanol_roll
-1 - marca ou coelho visivel;arte/intro/botao_pt.png;imagem;bt_portu
-1 - marca ou coelho visivel;arte/intro/botao_pt_sobre.png;imagem;bt_portu_roll
 1 - marca ou coelho visivel;arte/neve/cartel;imagem;cartel
 1 - marca ou coelho visivel;arte/selva/cartel;imagem;cartel
 2 - arte original;arte/cidade/aceite;imagem;aceite
@@ -52,29 +36,12 @@
 2 - arte original;arte/cidade/semaforo;animacao;semaforo
 2 - arte original;arte/cidade/tacho;animacao;tacho
 2 - arte original;arte/cidade/ventanas_puerta;imagem;ventanas_puerta
-2 - arte original;arte/comum/largada_adelante;imagem;largada_adelante
-2 - arte original;arte/comum/largada_atras;imagem;largada_atras
-2 - arte original;arte/comum/meta_adelante;animacao;meta_adelante
-2 - arte original;arte/comum/meta_atras;animacao;meta_atras
-2 - arte original;arte/deserto/agujero;imagem;agujero
 2 - arte original;arte/deserto/buitre;animacao;Buitre
 2 - arte original;arte/deserto/cactus_gran;imagem;cactus_gran
-2 - arte original;arte/deserto/cactus_petit;imagem;cactus_petit
 2 - arte original;arte/deserto/escorpion;animacao;escorpion
-2 - arte original;arte/deserto/fondo;imagem;fondo
-2 - arte original;arte/deserto/marcador_progresso;imagem;punto_movedizo
 2 - arte original;arte/deserto/mata;animacao;mata
-2 - arte original;arte/deserto/montana_pico;imagem;montana_pico
-2 - arte original;arte/deserto/montanota;imagem;montanota
-2 - arte original;arte/deserto/nube001;imagem;nube001
-2 - arte original;arte/deserto/nube002;imagem;nube002
-2 - arte original;arte/deserto/nube003;imagem;nube003
-2 - arte original;arte/deserto/plataforma;imagem;plataforma
-2 - arte original;arte/deserto/roca;imagem;roca
 2 - arte original;arte/deserto/serpiente;animacao;serpiente
-2 - arte original;arte/deserto/tapa_pozo;imagem;tapa pozo
 2 - arte original;arte/deserto/tormenta;animacao;tormenta
-2 - arte original;arte/deserto/tronco_buitre;imagem;tronco_buitre
 2 - arte original;arte/final/agujero;imagem;agujero
 2 - arte original;arte/final/agujero_grande;imagem;agujero_grande
 2 - arte original;arte/final/buitre;animacao;Buitre
@@ -124,9 +91,6 @@
 2 - arte original;arte/idioma_pt/resultados.png;imagem;Resultados
 2 - arte original;arte/interface/efeito_100;animacao;100puntos
 2 - arte original;arte/interface/efeito_600;animacao;600puntos
-2 - arte original;arte/interface/hud_itens;imagem;contador_pilas
-2 - arte original;arte/interface/hud_pontos;imagem;contador_puntos
-2 - arte original;arte/interface/hud_vidas;imagem;contador_vidas
 2 - arte original;arte/interface/quadro_recordes;imagem;cartel_records
 2 - arte original;arte/neve/aguila;animacao;aguila
 2 - arte original;arte/neve/arbol;imagem;arbol
@@ -189,8 +153,6 @@
 2 - som original;sons/cidade/snd_rueda.mp3.import;som;snd_rueda.mp3.import
 2 - som original;sons/cidade/snd_tacho.wav;som;snd_tacho.wav
 2 - som original;sons/cidade/snd_tacho.wav.import;som;snd_tacho.wav.import
-2 - som original;sons/comum/snd_backgroundMusic.mp3;som;snd_backgroundMusic.mp3
-2 - som original;sons/comum/snd_backgroundMusic.mp3.import;som;snd_backgroundMusic.mp3.import
 2 - som original;sons/comum/snd_corriendo.wav;som;snd_corriendo.wav
 2 - som original;sons/comum/snd_corriendo.wav.import;som;snd_corriendo.wav.import
 2 - som original;sons/comum/snd_empieza.mp3;som;snd_empieza.mp3
@@ -229,12 +191,6 @@
 2 - som original;sons/floresta/snd_tronco.mp3.import;som;snd_tronco.mp3.import
 2 - som original;sons/floresta/snd_zorro.mp3;som;snd_zorro.mp3
 2 - som original;sons/floresta/snd_zorro.mp3.import;som;snd_zorro.mp3.import
-2 - som original;sons/intro/armado.wav;som;armado.wav
-2 - som original;sons/intro/armado.wav.import;som;armado.wav.import
-2 - som original;sons/intro/chu.wav;som;chu.wav
-2 - som original;sons/intro/chu.wav.import;som;chu.wav.import
-2 - som original;sons/intro/swat.wav;som;swat.wav
-2 - som original;sons/intro/swat.wav.import;som;swat.wav.import
 2 - som original;sons/neve/snd_aguila.mp3;som;snd_aguila.mp3
 2 - som original;sons/neve/snd_aguila.mp3.import;som;snd_aguila.mp3.import
 2 - som original;sons/neve/snd_oso.mp3;som;snd_oso.mp3

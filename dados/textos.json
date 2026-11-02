@@ -1,4 +1,4 @@
 {
- "pt": {"novo": "Novo Jogo", "continuar": "Continuar", "efeitos": "Efeitos", "musica": "Música", "sim": "Sim", "nao": "Não", "sair": "Sair", "instrucoes": "Instruções", "aceitar": "Aceitar", "voltar": "Voltar", "pular": "Clique para pular"},
- "es": {"novo": "Nuevo Juego", "continuar": "Continuar", "efeitos": "Efectos", "musica": "Música", "sim": "Sí", "nao": "No", "sair": "Salir", "instrucoes": "Instrucciones", "aceitar": "Aceptar", "voltar": "Volver", "pular": "Clic para saltar"}
+ "pt": {"novo": "Novo Jogo", "continuar": "Continuar", "efeitos": "Efeitos", "musica": "Música", "sim": "Sim", "nao": "Não", "sair": "Sair", "instrucoes": "Instruções", "aceitar": "Aceitar", "voltar": "Voltar", "pular": "Clique para pular", "opcoes": "Opções", "tela_cheia": "Tela cheia"},
+ "es": {"novo": "Nuevo Juego", "continuar": "Continuar", "efeitos": "Efectos", "musica": "Música", "sim": "Sí", "nao": "No", "sair": "Salir", "instrucoes": "Instrucciones", "aceitar": "Aceptar", "voltar": "Volver", "pular": "Clic para saltar", "opcoes": "Opciones", "tela_cheia": "Pantalla completa"}
 }
