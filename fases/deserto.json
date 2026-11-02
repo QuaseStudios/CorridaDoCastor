@@ -10,7 +10,7 @@
   "GPiso0Info": {"idle": [[0, 100, 1153, 0]]},
   "jogadorInfo": {"parado": [[-15, 62, 26, 0], [-12, 117, 28, 60]], "correndo": [[-23, 69, 26, 0], [-17, 110, 29, 59]], "saltando": [[-27, 65, 37, 0], [-23, 117, 40, 66]], "agachado": [[-32, 60, 90, 0]], "morrendo": [[-75, 89, 9, 0]], "festejando": [[-26, 120, 32, 0]]},
   "GPared1Info": {"idle": [[0, 270, 100, 0]]},
-  "cactus_granInfo": {"idle": [[-13, 72, 15, -9]]},
+  "cactus_granInfo": {"idle": [[-30, 52, 30, -6]]},
   "agujeroInfo": {"idle": [[-29, 4, 32, -7]]},
   "GPiso2Info": {"idle": [[0, 100, 1838, 0]]},
   "plataformaInfo": {"idle": [[-72, 10, 71, -8]]},
